@@ -5,17 +5,215 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naylla Leite</title>
 </head>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Mega Menu Copa</title>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Copa 2026</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0a3d62;
+    color: white;
+}
+
+/* NAV */
+nav {
+    background: rgba(0,50,0,0.8);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.menu a::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background: gold;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    color: gold;
+    font-size: 50px;
+}
+
+/* PLACAR */
+.score {
+    background: #013220;
+    margin: 50px auto;
+    width: 80%;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.live {
+    color: red;
+    font-weight: bold;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* TIMES */
+.match {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 22px;
+}
+
+/* TABELA */
+.table {
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 10px;
+    text-align: center;
+}
+
+.table th {
+    background: rgba(0,100,0,0.7);
+}
+
+/* CARDS */
+.teams {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 50px;
+}
+
+.card {
+    background: rgba(0,50,0,0.6);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 60px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .teams {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+</head>
+
 <body>
-    <div class="conteiner">
-        <header>
 
-        </header>
-        <section>
+<nav>
+    <div class="menu">
+        <a href="#">Início</a>
+        <a href="#">Seleções</a>
+        <a href="#">Jogos</a>
+        <a href="#">Tabela</a>
+    </div>
+</nav>
 
-        </section>
-        <footer>
-            <p>Naylla Leite</p>
-        </footer>
-    </div>  
+<!-- HERO -->
+<section class="hero">
+    <h1>🏆 Copa do Mundo 2026</h1>
+</section>
+
+<!-- PLACAR -->
+<div class="score">
+    <div class="live">AO VIVO</div>
+    <div class="match">
+        🇧🇷 Brasil 2 x 1 Argentina 🇦🇷
+    </div>
+</div>
+
+<!-- TABELA -->
+<table class="table">
+    <tr>
+        <th>Jogo</th>
+        <th>Data</th>
+        <th>Estádio</th>
+    </tr>
+    <tr>
+        <td>Brasil x França</td>
+        <td>10/07</td>
+        <td>Nova York</td>
+    </tr>
+    <tr>
+        <td>Alemanha x Espanha</td>
+        <td>11/07</td>
+        <td>Los Angeles</td>
+    </tr>
+</table>
+
+<!-- TIMES -->
+<div class="teams">
+    <div class="card">
+        <img src="https://flagcdn.com/w80/br.png">
+        <h3>Brasil</h3>
+    </div>
+
+    <div class="card">
+        <img src="https://flagcdn.com/w80/ar.png">
+        <h3>Argentina</h3>
+    </div>
+
+    <div class="card">
+        <img src="https://flagcdn.com/w80/fr.png">
+        <h3>França</h3>
+    </div>
+</div>
+
 </body>
+</html>
 </html>
